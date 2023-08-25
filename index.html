@@ -10,7 +10,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-   <title>Web</title>
+   <title>WEb</title>
 
 <meta name="description" content=DESCRIPTION>
 <meta name="generator" content=META_GENERATOR>
@@ -18,11 +18,11 @@
 <!-- Apple Stuff -->
 <meta name="apple-mobile-web-app-capable" content=APPLE_MOBILE_WEB_APP_CAPABLE>
 <meta name="apple-mobile-web-app-status-bar-style" content=APPLE_MOBILE_WEB_APP_STATUS_BAR_STYLE>
-<meta name="apple-mobile-web-app-title" content=APPLE_MOBILE_WEB_APP_TITLE>
+<meta name="apple-mobile-web-app-title" content=APPLE_TITLE>
 
 <!-- Google / Search Engine Tags -->
 <meta itemprop="name" content=Name>
-<meta itemprop="description" content=ITEMPROP_DECRIPTION>
+<meta itemprop="description" content=ITEMPROP_DESCRIPTION>
 <meta itemprop="image" content=ITEMPROP_IMAGE>
 
 <!-- MS Tile - for Microsoft apps-->
@@ -37,8 +37,8 @@
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content=TWITTER_CARD>
-<meta name="twitter:title" content=TWITTER_TITLE>
-<meta name="twitter:description" content=TWITTER_DESCRIPTION>
+<meta name="twitter:title" content=Twitter title>
+<meta name="twitter:description" content=Twitter Discription>
 <meta name="twitter:image" content=TWITTER_IMAGE>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -66,28 +66,38 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}#ilvv7{height:400vh;background-color:grey;}#i210u{color:black;}#iv5xhy{color:white;}#ivus5j{color:black;}#ian8de{color:black;}#iev2hr{font-family:Courier New, Courier, monospace;}#i33da{width:100%;}#i3scf5{color:#d983a6;font-size:40px;}#i9op8z{color:#d983a6;font-size:40px;}
+* { box-sizing: border-box; } body {margin: 0;}
 
 </style>
 
 </head>
 		<html>
  <head></head>
- <body id="i8me">
-  <div id="ilvv7" class="col">
-   <section id="ikz6k" class="bdg-sect"></section>
-   <section id="iyxup" class="bdg-sect"></section>
-   <p id="i33da" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore d magna aliquadf</p><a page="page://2CNk4s5hOY8gkm27X8" name="conatct" slug="conatct" href="//web-webbuildershopiana.vercel.app/conatct.html" link-type="page" id="i3scf5">Link</a><a page="page://UWzMjt3T5ljD7fr4aNM" name="Page 4" slug="page-4" href="//web-webbuildershopiana.vercel.app/page-4.html" link-type="page" id="i9op8z">page4</a>
-   <h1 id="iev2hr" class="heading">Insert title here dffdfdd d d</h1>
-   <h1 id="ian8de" class="heading">Insert title here dffdfd</h1>
-   <h1 id="iv5xhy" class="heading">Insert title here dffdfd</h1>
-   <h1 id="ivus5j" class="heading">Insert title here dffdfd</h1>
-   <h1 id="iixo1p" class="heading">Insert title here dffdfd</h1>
-   <p id="ifag" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dof eiusmod tempor incididunt ut laborfe et dolore magna aliqua d</p>
-   <p id="ikyiq3" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dof eiusmod tempor incididunt ut laborfe et dolore magna aliqua d</p>
-   <p id="ic26yf" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed dof eiusmod tempor incididunt ut laborfe et dolore magna aliqua d</p>
-   <h1 id="i210u" class="heading">Insert title herefdfdfdffffdfdfdfd<br></h1>
-  </div>
+ <body>
+  <form id="i30r">
+   <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label" id="ixnm">Email address</label><input type="email" required id="exampleInputEmail1" aria-describedby="emailHelp" name="exampleInputEmail1" class="form-control">
+    <div id="emailHelp" class="form-text">
+     We'll never share your email with anyone else.
+    </div>
+   </div>
+   <div class="mb-3">
+    <label for="exampleInputEmail1" id="icxd" class="form-label">Password</label><input type="password" required id="exampleInputPassword1" name="exampleInputEmail1" class="form-control">
+   </div>
+   <div class="mb-3">
+    <label for="formFile" class="form-label" id="ilcta">Choose file</label><input type="file" required id="formFile" name="formFile" class="form-control">
+   </div>
+   <div class="mb-3 form-check">
+    <input type="checkbox" id="exampleCheck1" class="form-check-input"><label for="exampleCheck1" class="form-check-label" id="ipn6p">Check me out</label>
+   </div><button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <script>var props = {"i30r":{"name":"","target":"_self","method":"POST","url":"https://api.shopiana.in/api/v1/wbWebsite/102/form/formData?store=web","emailenable":false}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function({name:t,method:e,url:n,emailenable:r}){if(t){const o=this;this.addEventListener("submit",i=>{i.preventDefault();const a=new FormData(o);a.append("emailEnabled",r),a.append("formName",t),fetch(n,{method:e,body:a}).then(t=>{if(t.ok)return t.json();throw new Error("API call failed")}).then(t=>{console.log("API response:",t)}).catch(t=>{console.error("Error during API call:",t)})})}else console.log("somthing went wrong")}.bind(el))(props[el.id]);
+          }</script>
  </body>
 </html>
 </html>
