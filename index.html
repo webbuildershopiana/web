@@ -71,7 +71,7 @@
 
 <style type="text/css">
 
-* { box-sizing: border-box; } body {margin: 0;}#iklfn{background-color:grey;}@media (max-width: 990px){#iklfn{background-color:brown;}}@media (max-width: 766px){#iklfn{background-color:red;}}@media (max-width: 576px){#iklfn{background-color:green;}}@media (max-width: 380px){#iklfn{background-color:black;color:white;}}
+* { box-sizing: border-box; } body {margin: 0;}@media (max-width: 766px){#i0yoa{color:white;text-align:center;}#i17sul{color:white;text-align:center;}#navbarDropdown{color:white;text-align:center;}#ihv8g{color:white;text-align:center;}}
 
 </style>
 
@@ -79,43 +79,80 @@
 		<html>
  <head></head>
  <body id="i8me" class="bg-secondary">
-  <div class="container-fluid" id="iwfif">
-   <div class="row row-cols-md-3 row-cols-sm-2 row-cols-1 g-4">
-    <div class="col">
-     <div class="card h-100">
-      <div class="card-body" id="iklfn">
-       <h5 class="card-title">Card title</h5>
-       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-      <div class="card-footer">
-       <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-     </div>
+  <nav class="navbar navbar-expand-lg navbar-light border" id="ivwej">
+   <div class="container-fluid">
+    <a href="#" class="navbar-brand">Navbar</a>
+    <div id="toggle-e48174c4-738b-4e21-96d1-76a87a2db607" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-e48174c4-738b-4e21-96d1-76a87a2db607" aria-controls="collapse-e48174c4-738b-4e21-96d1-76a87a2db607" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+     <span class="navbar-toggler-icon" id="iy48g"></span>
     </div>
-    <div class="col">
-     <div class="card h-100">
-      <div class="card-body">
-       <h5 class="card-title">Card title</h5>
-       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      </div>
-      <div class="card-footer">
-       <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-     </div>
-    </div>
-    <div class="col">
-     <div class="card h-100">
-      <div class="card-body">
-       <h5 class="card-title">Card title</h5>
-       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-      </div>
-      <div class="card-footer">
-       <small class="text-muted">Last updated 3 mins ago</small>
-      </div>
-     </div>
+    <div id="collapse-e48174c4-738b-4e21-96d1-76a87a2db607" class="collapse navbar-collapse">
+     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a aria-current="page" href="#" class="nav-link active" id="i0yoa">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" id="ihv8g">Link</a></li>
+      <li class="nav-item dropdown"><a href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link dropdown-toggle"> Dropdown </a>
+       <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">Action</a></li>
+        <li><a href="#" class="dropdown-item">Another action</a></li>
+        <li>
+         <hr class="dropdown-divider"></li>
+        <li><a href="#" class="dropdown-item">Something else here</a></li>
+       </ul></li>
+      <li class="nav-item" id="i17sul"><a href="#" tabindex="-1" aria-disabled="true" class="nav-link disabled">Disabled</a></li>
+     </ul>
+     <form id="ikvezk" class="d-flex">
+      <input type="search" required placeholder="Search" aria-label="Search" class="form-control me-2"><button type="submit" class="btn btn-outline-success">Search</button>
+     </form>
     </div>
    </div>
-  </div>
+  </nav>
+  <script>var props = {"ikvezk":{"name":"","target":"_self","method":"POST","url":"http://65.21.199.181:8081/api/v1/wbWebsite/751/form/formData?store=web","emailenable":false}};
+          var ids = Object.keys(props).map(function(id) { return '#'+id }).join(',');
+          var els = document.querySelectorAll(ids);
+          for (var i = 0, len = els.length; i < len; i++) {
+            var el = els[i];
+            (function ({ name, target, method, url, emailenable }) {
+        // const submitButton = this.querySelector('[type=submit]'); // Find the submit button
+        if (name) {
+            const form = this;
+            this.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent the default form submission
+                // Create a new FormData object
+                const formData = new FormData(form);
+                formData.append('emailEnabled', emailenable);
+                formData.append('formName', name);
+                // Perform an API call using fetch and Promises
+                fetch(url, {
+                    method: method,
+                    // headers: {
+                    //     'Content-Type': 'application/json',
+                    // },
+                    body: formData,
+                })
+                    .then(response => {
+                    if (response.ok) {
+                        // API call successful
+                        return response.json();
+                    }
+                    else {
+                        // API call failed
+                        throw new Error('API call failed');
+                    }
+                })
+                    .then(responseData => {
+                    console.log('API response:', responseData);
+                    // Your custom script logic here
+                })
+                    .catch(error => {
+                    console.error('Error during API call:', error);
+                });
+            });
+            // }
+        }
+        else {
+            console.log('somthing went wrong');
+        }
+    }.bind(el))(props[el.id]);
+          }</script>
  </body>
 </html>
 </html>
